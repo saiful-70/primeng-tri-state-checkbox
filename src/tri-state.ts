@@ -21,6 +21,23 @@ export interface TriStateFormControl {
  * Universal tri-state function that can cycle values or update FormControls
  * @param input - Either a FormControl to update or a boolean/null value to cycle
  * @returns If input is a value, returns the next tri-state value. If input is FormControl, updates it and returns void.
+ * 
+ * @example
+ *   ```typescript
+ *   onTriStateChange(control: any): void {
+ *     turnToTriState(control);
+ *   }
+ *   ```
+ *
+ *   ```html
+ *   <p-checkbox
+ *     [value]="form.controls.isActive.value"
+ *     inputId="isActive"
+ *     name="isActive"
+ *     [indeterminate]="form.controls.isActive.value === null"
+ *     [binary]="true"
+ *     (onChange)="onTriStateChange(form.controls.isActive)" />
+ *   ```
  */
 export function turnToTriState<T extends TriStateFormControl | boolean | null>(
   input: T
