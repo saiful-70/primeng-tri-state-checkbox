@@ -43,7 +43,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saiful/tri-state-checkbox"
+    "url": "https://github.com/saiful-70/primeng-tri-state-checkbox"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
