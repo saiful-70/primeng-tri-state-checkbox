@@ -239,6 +239,70 @@ type TriStateValue = boolean | null;
 type TriStateString = 'true' | 'false' | 'null';
 ```
 
+## Development & Contributing
+
+### Automated Publishing Workflow
+
+This package uses automated versioning and publishing through GitHub Actions. Contributors don't need to manually update versions or publish to NPM.
+
+#### Commit Message Format
+
+Use conventional commit messages to trigger automatic version bumps:
+
+```bash
+# For bug fixes (patch version: 1.0.0 → 1.0.1)
+git commit -m "fix: resolve checkbox state issue"
+
+# For new features (minor version: 1.0.0 → 1.1.0)  
+git commit -m "feat: add new utility function"
+
+# For breaking changes (major version: 1.0.0 → 2.0.0)
+git commit -m "major: change API interface"
+# OR
+git commit -m "feat: new feature
+
+BREAKING CHANGE: API has changed"
+
+# Other commits (no version bump)
+git commit -m "docs: update README"
+git commit -m "chore: update dependencies"
+```
+
+#### Development Workflow
+
+1. **Make your changes**
+2. **Commit with proper message format**
+3. **Push to main branch**
+4. **GitHub Actions automatically:**
+   - Runs tests and type checking
+   - Bumps version based on commit message
+   - Publishes to NPM
+   - Creates git tags
+
+```bash
+# Example workflow
+git add .
+git commit -m "feat: add new tri-state utility"
+git push origin main
+# 🎉 Package automatically published!
+```
+
+#### Pull Request Workflow
+
+For larger changes, use pull requests:
+
+```bash
+# Create feature branch
+git checkout -b feature/new-functionality
+
+# Make changes and commit
+git commit -m "feat: add advanced tri-state features"
+
+# Push and create PR
+git push origin feature/new-functionality
+# Create PR on GitHub → Merge → Automatic publish!
+```
+
 ## Browser Support
 
 - Modern browsers supporting ES2020+
