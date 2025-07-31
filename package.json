@@ -1,0 +1,65 @@
+{
+  "name": "primeng-tri-state-checkbox",
+  "version": "1.0.1",
+  "description": "A TypeScript utility library for tri-state checkbox functionality in Angular applications",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "tri-state",
+    "tristate",
+    "checkbox",
+    "angular",
+    "primeng",
+    "typescript",
+    "form-control",
+    "boolean",
+    "nullable",
+    "indeterminate",
+    "tailwind",
+    "tailwindcss",
+    "p-checkbox",
+    "angular-forms"
+  ],
+  "author": "Saiful",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saiful/tri-state-checkbox"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "@angular/forms": ">=19.0.0",
+    "primeng": ">=19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/forms": {
+      "optional": true
+    },
+    "primeng": {
+      "optional": true
+    }
+  }
+}
